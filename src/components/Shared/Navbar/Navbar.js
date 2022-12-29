@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 
 const Navbar = () => {
   return (
@@ -27,10 +29,10 @@ const Navbar = () => {
               className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-                <a>Item 1</a>
+               <Link>Item 1</Link>
               </li>
               <li tabIndex={0}>
-                <a className="justify-between">
+               <Link className="justify-between">
                   Parent
                   <svg
                     className="fill-current"
@@ -41,30 +43,30 @@ const Navbar = () => {
                   >
                     <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
                   </svg>
-                </a>
+                </Link>
                 <ul className="p-2">
                   <li>
-                    <a>Submenu 1</a>
+                   <Link>Submenu 1</Link>
                   </li>
                   <li>
-                    <a>Submenu 2</a>
+                   <Link>Submenu 2</Link>
                   </li>
                 </ul>
               </li>
               <li>
-                <a>Item 3</a>
+               <Link>Item 3</Link>
               </li>
             </ul>
           </div>
-          <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+         <Link className="btn btn-ghost normal-case text-xl">daisyUI</Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <a>Item 1</a>
+             <Link>Item 1</Link>
             </li>
             <li tabIndex={0}>
-              <a>
+             <Link>
                 Parent
                 <svg
                   className="fill-current"
@@ -75,18 +77,18 @@ const Navbar = () => {
                 >
                   <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
                 </svg>
-              </a>
+              </Link>
               <ul className="p-2">
                 <li>
-                  <a>Submenu 1</a>
+                 <Link>Submenu 1</Link>
                 </li>
                 <li>
-                  <a>Submenu 2</a>
+                 <Link>Submenu 2</Link>
                 </li>
               </ul>
             </li>
             <li>
-              <a>Item 3</a>
+             <Link>Item 3</Link>
             </li>
           </ul>
         </div>
