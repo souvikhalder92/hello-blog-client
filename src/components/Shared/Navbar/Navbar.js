@@ -28,7 +28,7 @@ const Navbar = () => {
               className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-                <Link>Item 1</Link>
+                <Link>Home</Link>
               </li>
               <li tabIndex={0}>
                 <Link className="justify-between">
