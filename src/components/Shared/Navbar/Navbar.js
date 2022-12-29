@@ -81,7 +81,13 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-          <Link className="text-xl"><img src={img1} alt="" className="w-20"/> Hello Blog</Link>
+          <div className="flex justify-center">
+            <img src={img1} alt="" className="w-20" />
+            <Link className="text-xl flex justify-center items-center">
+              {" "}
+              Hello Blog
+            </Link>
+          </div>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
