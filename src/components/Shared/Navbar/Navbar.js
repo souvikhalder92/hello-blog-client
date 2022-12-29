@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import img1 from "../../../img/img1.png";
 
 const Navbar = () => {
   return (
@@ -80,7 +81,7 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-          <Link className="btn btn-ghost normal-case text-xl">Hello Blog</Link>
+          <Link className="text-xl"><img src={img1} alt="" className="w-20"/> Hello Blog</Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
