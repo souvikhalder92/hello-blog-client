@@ -30,9 +30,9 @@ const Navbar = () => {
               <li>
                 <Link>Home</Link>
               </li>
-              {/* <li tabIndex={0}>
+              <li tabIndex={0}>
                 <Link className="justify-between">
-                  Category
+                  Sport
                   <svg
                     className="fill-current"
                     xmlns="http://www.w3.org/2000/svg"
@@ -45,18 +45,35 @@ const Navbar = () => {
                 </Link>
                 <ul className="p-2">
                   <li>
-                    <Link>Technology</Link>
+                    <Link>Sport 1</Link>
                   </li>
                   <li>
-                    <Link>Sport</Link>
+                    <Link>Sport 2</Link>
                   </li>
                 </ul>
-              </li> */}
-              <li>
-                <Link>Sport</Link>
               </li>
-              <li>
-                <Link>Technology</Link>
+
+              <li tabIndex={0}>
+                <Link className="justify-between">
+                  Technology
+                  <svg
+                    className="fill-current"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
+                  </svg>
+                </Link>
+                <ul className="p-2">
+                  <li>
+                    <Link>Technology 1</Link>
+                  </li>
+                  <li>
+                    <Link>Technology 2</Link>
+                  </li>
+                </ul>
               </li>
               <li>
                 <Link>Login</Link>
@@ -70,9 +87,9 @@ const Navbar = () => {
             <li>
               <Link>Home</Link>
             </li>
-            {/* <li tabIndex={0}>
+            <li tabIndex={0}>
               <Link>
-                Category
+                Sport
                 <svg
                   className="fill-current"
                   xmlns="http://www.w3.org/2000/svg"
@@ -85,18 +102,35 @@ const Navbar = () => {
               </Link>
               <ul className="p-2">
                 <li>
-                  <Link>Technology</Link>
+                  <Link>sport 1</Link>
                 </li>
                 <li>
-                  <Link>Sport</Link>
+                  <Link>sport 2</Link>
                 </li>
               </ul>
-            </li> */}
-            <li>
-              <Link>Sport</Link>
             </li>
-            <li>
-              <Link>Technology</Link>
+
+            <li tabIndex={0}>
+              <Link>
+                Technology
+                <svg
+                  className="fill-current"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
+                </svg>
+              </Link>
+              <ul className="p-2">
+                <li>
+                  <Link>Technology 1</Link>
+                </li>
+                <li>
+                  <Link>Technology 2</Link>
+                </li>
+              </ul>
             </li>
             <li>
               <Link>Login</Link>
