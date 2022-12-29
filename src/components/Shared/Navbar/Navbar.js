@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-
 const Navbar = () => {
   return (
     <div className="w-11/12 m-auto">
