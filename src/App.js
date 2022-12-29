@@ -15,6 +15,10 @@ function App() {
       <h1>hello </h1>
       <h1>Souvikdddddd</h1>
       <p>hhiff</p>
+      <button className="btn btn-info">Info</button>
+      <button className="btn btn-success">Success</button>
+      <button className="btn btn-warning">Warning</button>
+      <button className="btn btn-error">Error</button>
     </div>
   );
 }
