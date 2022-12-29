@@ -30,9 +30,9 @@ const Navbar = () => {
               <li>
                 <Link>Home</Link>
               </li>
-              {/* <li tabIndex={0}>
+              <li tabIndex={0}>
                 <Link className="justify-between">
-                  Category
+                  Sport
                   <svg
                     className="fill-current"
                     xmlns="http://www.w3.org/2000/svg"
@@ -51,7 +51,7 @@ const Navbar = () => {
                     <Link>Sport</Link>
                   </li>
                 </ul>
-              </li> */}
+              </li>
               <li>
                 <Link>Sport</Link>
               </li>
@@ -70,9 +70,9 @@ const Navbar = () => {
             <li>
               <Link>Home</Link>
             </li>
-            {/* <li tabIndex={0}>
+            <li tabIndex={0}>
               <Link>
-                Category
+                Sport
                 <svg
                   className="fill-current"
                   xmlns="http://www.w3.org/2000/svg"
@@ -85,16 +85,14 @@ const Navbar = () => {
               </Link>
               <ul className="p-2">
                 <li>
-                  <Link>Technology</Link>
+                  <Link>sport 1</Link>
                 </li>
                 <li>
-                  <Link>Sport</Link>
+                  <Link>sport 2</Link>
                 </li>
               </ul>
-            </li> */}
-            <li>
-              <Link>Sport</Link>
             </li>
+
             <li>
               <Link>Technology</Link>
             </li>
