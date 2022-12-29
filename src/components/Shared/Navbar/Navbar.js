@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div>
+    <div className="w-11/12 m-auto">
       <div className="navbar bg-base-100">
         <div className="navbar-start">
           <div className="dropdown">
@@ -28,11 +28,11 @@ const Navbar = () => {
               className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-                <Link>Item 1</Link>
+                <Link>Home</Link>
               </li>
-              <li tabIndex={0}>
+              {/* <li tabIndex={0}>
                 <Link className="justify-between">
-                  Parent
+                  Category
                   <svg
                     className="fill-current"
                     xmlns="http://www.w3.org/2000/svg"
@@ -45,15 +45,21 @@ const Navbar = () => {
                 </Link>
                 <ul className="p-2">
                   <li>
-                    <Link>Submenu 1</Link>
+                    <Link>Technology</Link>
                   </li>
                   <li>
-                    <Link>Submenu 2</Link>
+                    <Link>Sport</Link>
                   </li>
                 </ul>
+              </li> */}
+              <li>
+                <Link>Sport</Link>
               </li>
               <li>
-                <Link>Item 3</Link>
+                <Link>Technology</Link>
+              </li>
+              <li>
+                <Link>Login</Link>
               </li>
             </ul>
           </div>
@@ -62,11 +68,11 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <Link>Item 1</Link>
+              <Link>Home</Link>
             </li>
-            <li tabIndex={0}>
+            {/* <li tabIndex={0}>
               <Link>
-                Parent
+                Category
                 <svg
                   className="fill-current"
                   xmlns="http://www.w3.org/2000/svg"
@@ -79,17 +85,28 @@ const Navbar = () => {
               </Link>
               <ul className="p-2">
                 <li>
-                  <Link>Submenu 1</Link>
+                  <Link>Technology</Link>
                 </li>
                 <li>
-                  <Link>Submenu 2</Link>
+                  <Link>Sport</Link>
                 </li>
               </ul>
+            </li> */}
+            <li>
+              <Link>Sport</Link>
             </li>
             <li>
-              <Link>Item 3</Link>
+              <Link>Technology</Link>
+            </li>
+            <li>
+              <Link>Login</Link>
             </li>
           </ul>
+          <div className="form-control">
+            <label className="label cursor-pointer">
+              <input type="checkbox" className="toggle" />
+            </label>
+          </div>
         </div>
         <div className="navbar-end">
           <div className="form-control">
