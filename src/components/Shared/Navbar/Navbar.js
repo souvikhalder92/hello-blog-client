@@ -3,6 +3,12 @@ import { Link, NavLink } from "react-router-dom";
 import img1 from "../../../img/img1.png";
 
 const Navbar = () => {
+  const navLinkStyles = ({ ok }) => {
+    return {
+      textDecoration: ok ? "underline" : "no-underline",
+    };
+  };
+
   return (
     <div className="w-11/12 m-auto">
       <div className="navbar bg-base-100">
@@ -92,7 +98,10 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu  menu-horizontal px-1">
             <li>
-              <NavLink className="bg-white text-gray-800 underline-offset-8 btn-ghost hover:btn-success underline active:underline">
+              <NavLink
+                className="bg-white text-accent   hover:text-secondary hover:font-semibold hover:translate-y-1 hover:underline underline-offset-8"
+                to="/"
+              >
                 Home
               </NavLink>
             </li>
@@ -141,8 +150,14 @@ const Navbar = () => {
                 </li>
               </ul>
             </li>
+
             <li>
-              <Link>Login</Link>
+              <NavLink
+                className="bg-white text-accent   hover:text-secondary hover:font-semibold hover:translate-y-1 hover:underline underline-offset-8"
+                to="/"
+              >
+                Login
+              </NavLink>
             </li>
           </ul>
           <div className="form-control">
