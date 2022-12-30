@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import img1 from "../../../img/img1.png";
 
 const Navbar = () => {
@@ -83,16 +83,18 @@ const Navbar = () => {
           </div>
           <div className="flex justify-center">
             <img src={img1} alt="" className="w-20" />
-            <Link className="text-xl flex justify-center items-center">
+            <Link className="text-xl flex  justify-center items-center">
               {" "}
               Hello Blog
             </Link>
           </div>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
+          <ul className="menu  menu-horizontal px-1">
             <li>
-              <Link>Home</Link>
+              <NavLink className="bg-white text-gray-800 underline-offset-8 btn-ghost hover:btn-success underline active:underline">
+                Home
+              </NavLink>
             </li>
             <li tabIndex={0}>
               <Link>
@@ -149,30 +151,32 @@ const Navbar = () => {
             </label>
           </div>
         </div>
-        <div className="navbar-end">
-          <div className="form-control">
+        <div className="navbar-end ">
+          <div className="form-control hidden md:block lg:block">
             <input
               type="text"
               placeholder="Search"
               className="input input-bordered"
             />
           </div>
-          <button className="btn btn-ghost btn-circle">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-              />
-            </svg>
-          </button>
+          <div className="hidden md:block lg:block">
+            <button className="btn btn-ghost btn-circle">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                />
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
     </div>
