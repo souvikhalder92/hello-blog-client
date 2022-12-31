@@ -5,7 +5,7 @@ module.exports = {
     themes: [
       {
         helloblogtheme: {
-          primary: "#22d3ee",
+          primary: "rgb(127, 201, 221)",
 
           secondary: "#0ea5e9",
 
