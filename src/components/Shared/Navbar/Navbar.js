@@ -1,8 +1,21 @@
-import React from "react";
+import { accent } from "daisyui/src/colors";
+import React, { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import img1 from "../../../img/img1.png";
-
+import "./Navbar.css";
 const Navbar = () => {
+  const [theme, setTheme] = useState("light");
+  const toggleTheme = () => {
+    if (theme === "light") {
+      setTheme("dark");
+    } else {
+      setTheme("light");
+    }
+  };
+  useEffect(() => {
+    document.body.className = theme;
+  }, [theme]);
+
   const navLinkStyles = ({ ok }) => {
     return {
       textDecoration: ok ? "underline" : "no-underline",
@@ -10,8 +23,8 @@ const Navbar = () => {
   };
 
   return (
-    <div className="w-11/12 m-auto">
-      <div className="navbar bg-base-100">
+    <div className={` ${theme}`}>
+      <div className="navbar ">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -89,7 +102,11 @@ const Navbar = () => {
           </div>
           <div className="flex justify-center">
             <img src={img1} alt="" className="w-20" />
-            <Link className="text-xl flex  justify-center items-center">
+            <Link
+              className={`${
+                theme === "light" ? " text-accent" : " text-white"
+              } text-xl flex  text-accent  justify-center items-center hover:text-secondary duration-100 ease-linear`}
+            >
               {" "}
               Hello Blog
             </Link>
@@ -99,14 +116,25 @@ const Navbar = () => {
           <ul className="menu  menu-horizontal px-1">
             <li>
               <NavLink
-                className="bg-white text-accent   hover:text-secondary hover:font-semibold hover:translate-y-1 hover:underline underline-offset-8"
+                className={`${
+                  theme === "light"
+                    ? "bg-white text-accent"
+                    : "bg-accent text-white"
+                } text-accent   hover:text-secondary hover:font-semibold hover:translate-y-1 hover:underline underline-offset-8`}
                 to="/"
               >
                 Home
               </NavLink>
             </li>
             <li tabIndex={0}>
-              <Link>
+              <NavLink
+                className={`${
+                  theme === "light"
+                    ? "bg-white text-accent"
+                    : "bg-accent text-white"
+                } text-accent   hover:text-secondary hover:font-semibold hover:translate-y-1 hover:underline underline-offset-8`}
+                to="/"
+              >
                 Sport
                 <svg
                   className="fill-current"
@@ -117,19 +145,44 @@ const Navbar = () => {
                 >
                   <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
                 </svg>
-              </Link>
+              </NavLink>
               <ul className="p-2">
                 <li>
-                  <Link>sport 1</Link>
+                  <NavLink
+                    className={`${
+                      theme === "light"
+                        ? "bg-white text-accent"
+                        : "bg-accent text-white"
+                    } text-accent   hover:text-secondary hover:font-semibold hover:-translate-y-2 hover:underline underline-offset-8`}
+                    to="/"
+                  >
+                    sport 1
+                  </NavLink>
                 </li>
                 <li>
-                  <Link>sport 2</Link>
+                  <NavLink
+                    className={`${
+                      theme === "light"
+                        ? "bg-white text-accent"
+                        : "bg-accent text-white"
+                    } text-accent   hover:text-secondary hover:font-semibold hover:-translate-y-2 hover:underline underline-offset-8`}
+                    to="/"
+                  >
+                    sport 2
+                  </NavLink>
                 </li>
               </ul>
             </li>
 
             <li tabIndex={0}>
-              <Link>
+              <NavLink
+                className={`${
+                  theme === "light"
+                    ? "bg-white text-accent"
+                    : "bg-accent text-white"
+                } text-accent   hover:text-secondary hover:font-semibold hover:translate-y-1 hover:underline underline-offset-8`}
+                to="/"
+              >
                 Technology
                 <svg
                   className="fill-current"
@@ -140,21 +193,43 @@ const Navbar = () => {
                 >
                   <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
                 </svg>
-              </Link>
+              </NavLink>
               <ul className="p-2">
                 <li>
-                  <Link>Technology 1</Link>
+                  <NavLink
+                    className={`${
+                      theme === "light"
+                        ? "bg-white text-accent"
+                        : "bg-accent text-white"
+                    } text-accent   hover:text-secondary hover:font-semibold hover:translate-y-1 hover:underline underline-offset-8`}
+                    to="/"
+                  >
+                    Technology 1
+                  </NavLink>
                 </li>
                 <li>
-                  <Link>Technology 2</Link>
+                  <NavLink
+                    className={`${
+                      theme === "light"
+                        ? "bg-white text-accent"
+                        : "bg-accent text-white"
+                    } text-accent   hover:text-secondary hover:font-semibold hover:translate-y-1 hover:underline underline-offset-8`}
+                    to="/"
+                  >
+                    Technology 2
+                  </NavLink>
                 </li>
               </ul>
             </li>
 
             <li>
               <NavLink
-                className="bg-white text-accent   hover:text-secondary hover:font-semibold hover:translate-y-1 hover:underline underline-offset-8"
-                to="/"
+                className={`${
+                  theme === "light"
+                    ? "bg-white text-accent"
+                    : "bg-accent text-white"
+                } text-accent   hover:text-secondary hover:font-semibold hover:translate-y-1 hover:underline underline-offset-8`}
+                to="/login"
               >
                 Login
               </NavLink>
@@ -162,7 +237,7 @@ const Navbar = () => {
           </ul>
           <div className="form-control">
             <label className="label cursor-pointer">
-              <input type="checkbox" className="toggle" />
+              <input type="checkbox" onClick={toggleTheme} className="toggle" />
             </label>
           </div>
         </div>
@@ -175,7 +250,7 @@ const Navbar = () => {
             />
           </div>
           <div className="hidden md:block lg:block">
-            <button className="btn btn-ghost btn-circle">
+            <button className="btn btn-ghost btn-circle text-secondary">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"

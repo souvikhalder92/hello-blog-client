@@ -6,7 +6,15 @@
   height: 40vmin;
   pointer-events: none;
 }
-
+/* toggle--button */
+.dark {
+background-color:#1f2937 ;
+  color: #fff;
+}
+.light {
+  background-color: #fff;
+  color: #1f2937;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
