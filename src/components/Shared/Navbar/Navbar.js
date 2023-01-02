@@ -1,4 +1,3 @@
-import { accent } from "daisyui/src/colors";
 import React, { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import img1 from "../../../img/img1.png";
@@ -12,6 +11,7 @@ const Navbar = () => {
       setTheme("light");
     }
   };
+
   useEffect(() => {
     document.body.className = theme;
   }, [theme]);
