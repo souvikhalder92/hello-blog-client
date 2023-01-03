@@ -14,3 +14,29 @@
 .underHoverCenter:hover::after {
     transform: scale(1,1);
 }
+
+.underHoverLeft::after {
+    transform: scale(0, 1);
+    transform-origin: 0% 100%;
+    transition: transform 0.3s ease;
+}
+
+.underHoverLeft:hover::after {
+    transform: scale(1, 1);
+    
+}
+
+
+.underHoverLeftToRight::after {
+    transform: scale(0, 1);
+    transform-origin: 100% 0%;
+    transition: transform 0.3s ease;
+}
+.underHoverLeftToRight:hover::after {
+    transform: scale(1, 1);
+    transform-origin: 0% 100%;
+}
+
+/* .underHoverLeft:hover::before {
+    transform: scale(1, 0);
+} */
