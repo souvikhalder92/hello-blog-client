@@ -48,10 +48,24 @@ const Navbar = () => {
               className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-                <Link>Home</Link>
+                <Link
+                  className={`${
+                    theme === "light"
+                      ? "bg-white text-accent"
+                      : "bg-accent text-white"
+                  } underHover underHoverCenter  hover:text-secondary hover:font-semibold mt-1 `}
+                >
+                  Home
+                </Link>
               </li>
               <li tabIndex={0}>
-                <Link className="justify-between">
+                <Link
+                  className={`${
+                    theme === "light"
+                      ? "bg-white text-accent"
+                      : "bg-accent text-white"
+                  } justify-between underHover underHoverCenter  hover:text-secondary hover:font-semibold mt-1 `}
+                >
                   Sport
                   <svg
                     className="fill-current"
@@ -65,16 +79,38 @@ const Navbar = () => {
                 </Link>
                 <ul className="p-2">
                   <li>
-                    <Link>Sport 1</Link>
+                    <Link
+                      className={`${
+                        theme === "light"
+                          ? " bg-sky-300 text-sky-800 "
+                          : " bg-white text-accent"
+                      } underHoverBtn underHoverCenter hover:text-accent font-semibold mb-1 `}
+                    >
+                      Sport 1
+                    </Link>
                   </li>
                   <li>
-                    <Link>Sport 2</Link>
+                    <Link
+                      className={`${
+                        theme === "light"
+                          ? " bg-sky-300 text-sky-800 "
+                          : " bg-white text-accent"
+                      } underHoverBtn underHoverCenter hover:text-accent font-semibold mb-1`}
+                    >
+                      Sport 2
+                    </Link>
                   </li>
                 </ul>
               </li>
 
               <li tabIndex={0}>
-                <Link className="justify-between">
+                <Link
+                  className={`${
+                    theme === "light"
+                      ? "bg-white text-accent"
+                      : "bg-accent text-white"
+                  } justify-between underHover underHoverCenter  hover:text-secondary hover:font-semibold mt-1 `}
+                >
                   Technology
                   <svg
                     className="fill-current"
@@ -88,31 +124,63 @@ const Navbar = () => {
                 </Link>
                 <ul className="p-2">
                   <li>
-                    <Link>Technology 1</Link>
+                    <Link
+                      className={`${
+                        theme === "light"
+                          ? " bg-sky-300 text-sky-800 "
+                          : " bg-white text-accent"
+                      } underHoverBtn underHoverCenter hover:text-accent font-semibold mb-1 `}
+                    >
+                      Technology 1
+                    </Link>
                   </li>
                   <li>
-                    <Link>Technology 2</Link>
+                    <Link
+                      className={`${
+                        theme === "light"
+                          ? " bg-sky-300 text-sky-800 "
+                          : " bg-white text-accent"
+                      } underHoverBtn underHoverCenter hover:text-accent font-semibold mb-1 `}
+                    >
+                      Technology 2
+                    </Link>
                   </li>
                 </ul>
               </li>
               <li>
-                <Link>Login</Link>
+                <Link
+                  className={`${
+                    theme === "light"
+                      ? "bg-white text-accent"
+                      : "bg-accent text-white"
+                  }underHover underHoverCenter  hover:text-secondary hover:font-semibold mt-1 `}
+                >
+                  Login
+                </Link>
               </li>
+              <div className="form-control">
+                <label className="label cursor-pointer  mt-4">
+                  <input
+                    type="checkbox"
+                    onClick={toggleTheme}
+                    className="toggle bg-sky-400 toggle-sm"
+                  />
+                </label>
+              </div>
             </ul>
           </div>
           <div className="flex justify-center">
             <img src={img1} alt="" className="w-20" />
             <Link
-              className={`${
+              className={` ${
                 theme === "light" ? " text-accent" : " text-white"
-              } text-xl flex  text-accent  justify-center items-center hover:text-secondary duration-100 ease-linear`}
+              } text-xl flex  text-accent  justify-center items-center font-semibold hover:text-secondary duration-200  hover:ease-linear`}
             >
-              {" "}
               Hello Blog
             </Link>
           </div>
         </div>
-        <div className="navbar-center hidden lg:flex">
+        <div className="navbar-center hidden lg:flex z-10">
           <ul className="menu  menu-horizontal px-1">
             <li>
               <NavLink
@@ -120,7 +188,7 @@ const Navbar = () => {
                   theme === "light"
                     ? "bg-white text-accent"
                     : "bg-accent text-white"
-                } text-accent   hover:text-secondary hover:font-semibold hover:translate-y-1 hover:underline underline-offset-8`}
+                }  underHover underHoverCenter  hover:text-secondary hover:font-semibold hover:translate-y-1 `}
                 to="/"
               >
                 Home
@@ -132,7 +200,7 @@ const Navbar = () => {
                   theme === "light"
                     ? "bg-white text-accent"
                     : "bg-accent text-white"
-                } text-accent   hover:text-secondary hover:font-semibold hover:translate-y-1 hover:underline underline-offset-8`}
+                }  underHover underHoverCenter  hover:text-secondary hover:font-semibold hover:translate-y-1 `}
                 to="/"
               >
                 Sport
@@ -151,24 +219,24 @@ const Navbar = () => {
                   <NavLink
                     className={`${
                       theme === "light"
-                        ? "bg-white text-accent"
-                        : "bg-accent text-white"
-                    } text-accent   hover:text-secondary hover:font-semibold hover:-translate-y-2 hover:underline underline-offset-8`}
+                        ? " bg-sky-300 text-white "
+                        : " bg-white text-accent"
+                    } underHoverBtn underHoverCenter hover:text-sky-800 font-semibold hover:-translate-x-2 mb-1 `}
                     to="/"
                   >
-                    sport 1
+                    Sport 1
                   </NavLink>
                 </li>
                 <li>
                   <NavLink
                     className={`${
                       theme === "light"
-                        ? "bg-white text-accent"
-                        : "bg-accent text-white"
-                    } text-accent   hover:text-secondary hover:font-semibold hover:-translate-y-2 hover:underline underline-offset-8`}
+                        ? " bg-sky-300 text-white "
+                        : " bg-white text-accent"
+                    } underHoverBtn underHoverCenter hover:text-sky-800 font-semibold hover:-translate-x-2 `}
                     to="/"
                   >
-                    sport 2
+                    Sport 2
                   </NavLink>
                 </li>
               </ul>
@@ -180,7 +248,7 @@ const Navbar = () => {
                   theme === "light"
                     ? "bg-white text-accent"
                     : "bg-accent text-white"
-                } text-accent   hover:text-secondary hover:font-semibold hover:translate-y-1 hover:underline underline-offset-8`}
+                } text-accent underHover underHoverCenter  hover:text-secondary hover:font-semibold hover:translate-y-1 `}
                 to="/"
               >
                 Technology
@@ -199,9 +267,9 @@ const Navbar = () => {
                   <NavLink
                     className={`${
                       theme === "light"
-                        ? "bg-white text-accent"
-                        : "bg-accent text-white"
-                    } text-accent   hover:text-secondary hover:font-semibold hover:translate-y-1 hover:underline underline-offset-8`}
+                        ? " bg-sky-300 text-white "
+                        : " bg-white text-accent"
+                    } underHoverBtn underHoverCenter hover:text-sky-800 font-semibold hover:-translate-x-2 mb-1 `}
                     to="/"
                   >
                     Technology 1
@@ -211,9 +279,9 @@ const Navbar = () => {
                   <NavLink
                     className={`${
                       theme === "light"
-                        ? "bg-white text-accent"
-                        : "bg-accent text-white"
-                    } text-accent   hover:text-secondary hover:font-semibold hover:translate-y-1 hover:underline underline-offset-8`}
+                        ? " bg-sky-300 text-white "
+                        : " bg-white text-accent"
+                    } underHoverBtn underHoverCenter hover:text-sky-800 font-semibold hover:-translate-x-2 `}
                     to="/"
                   >
                     Technology 2
@@ -228,7 +296,7 @@ const Navbar = () => {
                   theme === "light"
                     ? "bg-white text-accent"
                     : "bg-accent text-white"
-                } text-accent   hover:text-secondary hover:font-semibold hover:translate-y-1 hover:underline underline-offset-8`}
+                } text-accent underHover underHoverCenter  hover:text-secondary hover:font-semibold hover:translate-y-1 `}
                 to="/login"
               >
                 Login
@@ -237,7 +305,11 @@ const Navbar = () => {
           </ul>
           <div className="form-control">
             <label className="label cursor-pointer">
-              <input type="checkbox" onClick={toggleTheme} className="toggle" />
+              <input
+                type="checkbox"
+                onClick={toggleTheme}
+                className="toggle bg-sky-400"
+              />
             </label>
           </div>
         </div>
@@ -246,7 +318,7 @@ const Navbar = () => {
             <input
               type="text"
               placeholder="Search"
-              className="input input-bordered"
+              className="input input-bordered text-gray-600 border-sky-500"
             />
           </div>
           <div className="hidden md:block lg:block">
