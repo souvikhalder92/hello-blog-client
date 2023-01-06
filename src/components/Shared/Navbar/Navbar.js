@@ -27,10 +27,17 @@ const Navbar = () => {
       <div className="navbar ">
         <div className="navbar-start">
           <div className="dropdown">
-            <label tabIndex={0} className="btn btn-ghost lg:hidden">
+            <label
+              tabIndex={0}
+              className={`${
+                theme === "light"
+                  ? "bg-white text-accent"
+                  : "bg-accent text-white"
+              } text-accent hover:text-secondary lg:hidden `}
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
+                className="h-6 w-6"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -153,7 +160,7 @@ const Navbar = () => {
                     theme === "light"
                       ? "bg-white text-accent"
                       : "bg-accent text-white"
-                  }underHover underHoverCenter  hover:text-secondary hover:font-semibold mt-1 `}
+                  } underHover underHoverCenter  hover:text-secondary hover:font-semibold mt-1 `}
                 >
                   Login
                 </Link>
@@ -170,11 +177,11 @@ const Navbar = () => {
             </ul>
           </div>
           <div className="flex justify-center">
-            <img src={img1} alt="" className="w-20" />
+            <img src={img1} alt="" className="w-20 hidden lg:block" />
             <Link
               className={` ${
                 theme === "light" ? " text-accent" : " text-white"
-              } text-xl flex  text-accent  justify-center items-center font-semibold hover:text-secondary duration-200  hover:ease-linear`}
+              } text-xl font-poppins flex  text-accent  justify-center items-center font-semibold hover:text-secondary duration-200  hover:ease-linear ml-2 lg:ml-0`}
             >
               Hello Blog
             </Link>
@@ -318,7 +325,7 @@ const Navbar = () => {
             <input
               type="text"
               placeholder="Search"
-              className="input input-bordered text-gray-600 border-sky-500"
+              className="input input-bordered text-gray-600 border-sky-400"
             />
           </div>
           <div className="hidden md:block lg:block">

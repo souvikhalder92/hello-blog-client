@@ -27,7 +27,12 @@ module.exports = {
     ],
   },
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        poppins: ["Poppins"],
+        Merriweather: ["Merriweather"],
+      },
+    },
   },
   plugins: [require("daisyui")],
 };

@@ -4,8 +4,8 @@ const Banner = () => {
   return (
     <div>
       <div className="carousel">
-        <div className="relative ">
-          <h1 className="underHover underHoverCenter text-[1.5rem]  lg:text-[3rem]  absolute top-[30%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
+        <div className="relative">
+          <h1 className="underHover underHoverCenterBanner font-poppins text-[1.5rem]  lg:text-[3rem]  absolute top-[30%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
             Hello Blog
           </h1>
           <p className="hidden lg:block underHover underHoverLeftToRight  absolute top-[40%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
