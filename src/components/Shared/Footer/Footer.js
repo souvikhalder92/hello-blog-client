@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer className={`${
       theme === "light" ? "bg-white text-accent" : "bg-accent text-white"
-    } footer p-10  text-base-content`}>
+    } footer p-10`}>
 
     <div>
       <h1 className="font-poppins font-bold text-xl">ABOUT US</h1> 
