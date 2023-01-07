@@ -1,20 +1,43 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { modeChangeContext } from "../../../context/ModeContext";
+
 import img1 from "../../../img/img1.png";
 import "./Navbar.css";
 const Navbar = () => {
-  const [theme, setTheme] = useState("light");
-  const toggleTheme = () => {
-    if (theme === "light") {
-      setTheme("dark");
-    } else {
-      setTheme("light");
-    }
-  };
+  const { toggleTheme, theme } = useContext(modeChangeContext);
 
-  useEffect(() => {
-    document.body.className = theme;
-  }, [theme]);
+  // console.log("nav");
+  // if (localStorage.getItem("theme-mode")) {
+  //   console.log("nav-ok");
+  // } else {
+  //   localStorage.setItem("theme-mode", "light");
+  // }
+
+  // const [theme, setTheme] = useState(localStorage.getItem("theme-mode"));
+  // const toggleTheme = () => {
+  //   if (theme === "light") {
+  //     setTheme("dark");
+  //     console.log(localStorage.getItem("theme-mode"), theme, "okif");
+  //     localStorage.setItem("theme-mode", theme);
+  //     console.log(localStorage.getItem("theme-mode"), theme, "okif");
+  //   } else {
+  //     setTheme("light");
+  //     console.log(localStorage.getItem("theme-mode"), theme, "ok-else");
+  //     localStorage.setItem("theme-mode", theme);
+  //     console.log(localStorage.getItem("theme-mode"), theme, "ok-else");
+  //   }
+  // };
+
+  // useEffect(() => {
+  //   // setTheme(localStorage.getItem("theme-mode"));
+  //   localStorage.setItem("theme-mode", theme);
+  //   document.body.className = theme;
+
+  //   console.log(localStorage.getItem("theme-mode"), theme, "effect");
+  // }, [theme]);
+  // localStorage.setItem("theme-mode", theme);
+  // console.log(localStorage.getItem("theme-mode"), theme, "global");
 
   const navLinkStyles = ({ ok }) => {
     return {
@@ -165,14 +188,12 @@ const Navbar = () => {
                   Login
                 </Link>
               </li>
-              <div className="form-control">
-                <label className="label cursor-pointer  mt-4">
-                  <input
-                    type="checkbox"
-                    onClick={toggleTheme}
-                    className="toggle bg-sky-400 toggle-sm"
-                  />
-                </label>
+              <div>
+                <input
+                  type="checkbox"
+                  onClick={toggleTheme}
+                  className="toggle bg-sky-400 toggle-sm"
+                />
               </div>
             </ul>
           </div>

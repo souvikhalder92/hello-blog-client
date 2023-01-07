@@ -1,0 +1,38 @@
+[
+    {
+        "id":"01",
+        "category":"Business",
+        "title":"Why Is the Most American Fruit So Hard to Buy?",
+        "image":"https://jellywp.com/wp/wesper1/wp-content/uploads/sites/13/2022/10/pexels-cottonbro-10667860-1400x933-1.jpg",
+        "authorName":"Malina Jons",
+        "date":"JULY 26, 2022"
+
+    },
+    {
+        "id":"02",
+        "category":"Sports",
+        "title":"The No Sugar Challenge That Almost Broke Me",
+        "image":"https://jellywp.com/wp/wesper1/wp-content/uploads/sites/13/2022/07/Screen-Shot-2022-10-18-at-11.08.31-PM-1400x881d-680x580.jpg",
+        "authorName":"Alanu mola",
+        "date":"JAN 26, 2022"
+
+    },
+    {
+        "id":"03",
+        "category":"Tech",
+        "title":"Life Lately + My Favorite Coffee for the New Year",
+        "image":"https://jellywp.com/wp/wesper1/wp-content/uploads/sites/13/2022/10/cup-filtered-coffee-scaled-1-1400x934-1-680x580.jpg",
+        "authorName":"Malina Jons",
+        "date":"AUGUST 12, 2022"
+
+    },
+    {
+        "id":"04",
+        "category":"Health",
+        "title":"Is This the Beginning of the End of the Internet?",
+        "image":"https://jellywp.com/wp/wesper1/wp-content/uploads/sites/13/2022/10/protection-against-cold-ge4e2fa9e3_1920-1400x788-1-680x580.jpg",
+        "authorName":"Malina Jons",
+        "date":"MAY 18, 2022"
+
+    }
+]
