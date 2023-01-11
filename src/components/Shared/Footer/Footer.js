@@ -36,7 +36,7 @@ const Footer = () => {
     <span>Subscribe to our mailing list to receives daily <br/> updates direct to your inbox!</span>
       <div className="form-control w-80">
         <label className="label">
-          <span className="label-text">Enter your email address</span>
+          <span>Enter your email address</span>
         </label> 
         <div className="relative">
           <input type="text" placeholder="username@site.com" className="input input-bordered w-full pr-16" /> 
