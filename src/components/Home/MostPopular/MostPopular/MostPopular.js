@@ -54,7 +54,7 @@ const MostPopular = () => {
                 </h2>
                 <p
                   className={`${
-                    theme === "light" ? "text-gray-600" : " text-accent"
+                    theme === "light" ? "text-gray-600" : " text-white"
                   } text-justify`}
                 >
                   Mauris mattis auctor cursus. Phasellus tellus tellus,
