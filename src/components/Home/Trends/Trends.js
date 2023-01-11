@@ -30,7 +30,7 @@ const Trends = () => {
             </div>
           </div>
         </div>
-        <div className="grid gap-[2rem] lg:gap-[4.3rem] grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mb-14">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {trends.map((trendItem) => (
             <TrendCard key={trendItem.id} trend={trendItem}></TrendCard>
           ))}
