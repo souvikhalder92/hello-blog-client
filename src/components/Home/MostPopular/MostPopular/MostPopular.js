@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { BsArrowRightCircle } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import { modeChangeContext } from "../../../../context/ModeContext";
@@ -6,6 +6,13 @@ import MostPopularCard from "../MostPopularCard/MostPopularCard";
 
 const MostPopular = () => {
   const { theme } = useContext(modeChangeContext);
+  const [mostPopular, setMostPopular] = useState([]);
+  useEffect(() => {
+    fetch("popular.json")
+      .then((res) => res.json())
+      .then((data) => setMostPopular(data));
+  }, []);
+  console.log(mostPopular);
   return (
     <div className="w-11/12 mx-auto">
       <div className="my-16">
@@ -24,7 +31,6 @@ const MostPopular = () => {
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <div>
-            <p>left</p>
             <div className="">
               <figure>
                 <img
@@ -49,12 +55,15 @@ const MostPopular = () => {
                 <p
                   className={`${
                     theme === "light" ? "text-gray-600" : " text-accent"
-                  }`}
+                  } text-justify`}
                 >
                   Mauris mattis auctor cursus. Phasellus tellus tellus,
                   imperdiet ut imperdiet eu, iaculis a sem Donec vehicula luctus
                   nunc in laoreet Aliquam erat volutpat. Suspendisse vulputate
-                  porttitor condimentum. Proin viverra orci...
+                  porttitor condimentum. Proin viverra orci a leo suscipit
+                  placerat. Sed feugiat posuere semper. Cras vitae mi erat,
+                  posuere mollis arcu. Pellentesque iaculis gravida nulla ac
+                  hendrerit.
                 </p>
                 <p className="text-sm mt-3">
                   By{" "}
@@ -66,9 +75,14 @@ const MostPopular = () => {
               </div>
             </div>
           </div>
-          <div>
-            <p>right</p>
-            <MostPopularCard></MostPopularCard>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+            {mostPopular.map((mostPopularItem) => (
+              <MostPopularCard
+                key={mostPopularItem.id}
+                popular={mostPopularItem}
+              ></MostPopularCard>
+            ))}
           </div>
         </div>
       </div>

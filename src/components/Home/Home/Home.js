@@ -11,7 +11,6 @@ const Home = () => {
       <Trends></Trends>
       <MostRead></MostRead>
       <MostPopular></MostPopular>
-      <h1>Home</h1>
     </div>
   );
 };
