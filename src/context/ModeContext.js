@@ -2,9 +2,9 @@ import React, { createContext, useEffect, useState } from "react";
 
 export const modeChangeContext = createContext();
 const ModeContext = ({ children }) => {
-  console.log("nav");
+  // console.log("nav");
   if (localStorage.getItem("theme-mode")) {
-    console.log("nav-ok");
+    // console.log("nav-ok");
   } else {
     localStorage.setItem("theme-mode", "light");
   }
@@ -13,14 +13,14 @@ const ModeContext = ({ children }) => {
   const toggleTheme = () => {
     if (theme === "light") {
       setTheme("dark");
-      console.log(localStorage.getItem("theme-mode"), theme, "okif");
+      // console.log(localStorage.getItem("theme-mode"), theme, "okif");
       localStorage.setItem("theme-mode", theme);
-      console.log(localStorage.getItem("theme-mode"), theme, "okif");
+      // console.log(localStorage.getItem("theme-mode"), theme, "okif");
     } else {
       setTheme("light");
-      console.log(localStorage.getItem("theme-mode"), theme, "ok-else");
+      // console.log(localStorage.getItem("theme-mode"), theme, "ok-else");
       localStorage.setItem("theme-mode", theme);
-      console.log(localStorage.getItem("theme-mode"), theme, "ok-else");
+      // console.log(localStorage.getItem("theme-mode"), theme, "ok-else");
     }
   };
 
@@ -29,10 +29,10 @@ const ModeContext = ({ children }) => {
     localStorage.setItem("theme-mode", theme);
     document.body.className = theme;
 
-    console.log(localStorage.getItem("theme-mode"), theme, "effect");
+    // console.log(localStorage.getItem("theme-mode"), theme, "effect");
   }, [theme]);
   localStorage.setItem("theme-mode", theme);
-  console.log(localStorage.getItem("theme-mode"), theme, "global");
+  // console.log(localStorage.getItem("theme-mode"), theme, "global");
 
   const modeInfo = { toggleTheme, theme };
 
