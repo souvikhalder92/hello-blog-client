@@ -1,0 +1,39 @@
+[
+    {
+        "id":"01",
+        "category":"Business",
+        "title":"Five Quotes For Some Extra Monday Motivation",
+        "image":"https://jellywp.com/wp/wesper1/wp-content/uploads/sites/13/2022/10/boxed-water-is-better-zahrut1g3QA-unsplash-1400x1050-1-680x580.jpg",
+        "authorName":"MICHAEL",
+        "date":"JULY 23, 2022"
+
+    },
+    {
+        "id":"02",
+        "category":"Inspiration",
+        "title":"The Car Industry Squirms, as It Gets What It Asked For",
+        "image":"https://jellywp.com/wp/wesper1/wp-content/uploads/sites/13/2022/10/pexels-erik-mclean-13712088-scaled-1400x934-1-680x580.jpg",
+        "authorName":"MICHAEL",
+        "date":"JULY 24, 2022"
+
+    },
+    {
+        "id":"03",
+        "category":"Sports",
+        "title":"This is all i need for my Vocation in this Week",
+        "image":"https://jellywp.com/wp/wesper1/wp-content/uploads/sites/13/2022/10/pexels-pok-rie-1726310-scaled-1400x933-1-680x580.jpg",
+        "authorName":"MICHAEL",
+        "date":"AUGUST 12, 2022"
+
+    },
+    {
+        "id":"04",
+        "category":"Active",
+        "title":"Outdoor Photo Shooting With clean and Beautiful",
+        "image":"https://jellywp.com/wp/wesper1/wp-content/uploads/sites/13/2022/10/briana-tozour-YsFgsZJ4az0-unsplash-1400x933-1-680x580.jpg",
+        "authorName":"MICHAEL",
+        "date":"MAY 18, 2022"
+
+    }
+
+]
